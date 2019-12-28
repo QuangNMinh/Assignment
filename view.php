@@ -8,6 +8,7 @@
 </head>
 <body>
     <?php
+    require_once 'menu.php';
         //Refer to database 
         $db = parse_url(getenv("DATABASE_URL"));
         $pdo = new PDO("pgsql:" . sprintf(
