@@ -3,7 +3,18 @@
 <head>
     <title>Create Product</title>
 </head>
-<?php
+
+
+<body>
+<h1>Create Product </h1>
+    <form action="insertProduct.php" method="post">
+        Name: <input type="text" name="name" >
+        <br>
+        Price: <input type="text" name="price">
+        <br>
+        <input type="submit" value="Insert">
+    </form>
+    <?php
 
     $db = parse_url(getenv("DATABASE_URL"));
     $pdo = new PDO("pgsql:" . sprintf(
@@ -21,20 +32,10 @@
         'price' => $price
     ];
     $stmt =  
-        $pdo->prepare("INSERT INTO products(name, price) VALUES (:name,:price)");	
+        $pdo->prepare("INSERT INTO products(name, price) VALUES (:name,:price)");   
     $stmt->execute($data);
     echo("insert ok!");
  
 ?>
-
-<body>
-<h1>Create Product </h1>
-    <form action="insertProduct.php" method="post">
-        Name <input type="text" name="name" >
-        <br>
-        Price <input type="text" name="price">
-        <br>
-        <input type="submit" value="Insert">
-    </form>
 </body>
 </html>
