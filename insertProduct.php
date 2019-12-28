@@ -20,14 +20,7 @@
         'name' => $name,
         'price' => $price
     ];
-    $stmt =  
-        $pdo->prepare("INSERT INTO products(name, price) VALUES (:name,:price)");   
-    $stmt->execute($data);
-    if (!$stmt) {
-        $error = $error . "<br>Can't add product, please try again";
-    } else {
-        $msg = "Added successfully!";
-    }
+    
     
  
 ?>
@@ -42,6 +35,14 @@
         Price: <input type="text" name="price">
         <br>
         <input type="submit" value="Insert">
+        <?php $stmt =  
+        $pdo->prepare("INSERT INTO products(name, price) VALUES (:name,:price)");   
+    $stmt->execute($data);
+    if (!$stmt) {
+        $error = $error . "<br>Can't add product, please try again";
+    } else {
+        $msg = "Added successfully!";
+    } ?>
     </form>
     
 </body>
