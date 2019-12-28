@@ -8,6 +8,8 @@
 <body>
 <h1>Create Product </h1>
     <form action="insertProduct.php" method="post">
+        <div class="error"><?php echo $error; ?></div>
+        <div class="msg"><?php echo $msg; ?></div>
         Name: <input type="text" name="name" >
         <br>
         Price: <input type="text" name="price">
@@ -34,7 +36,12 @@
     $stmt =  
         $pdo->prepare("INSERT INTO products(name, price) VALUES (:name,:price)");   
     $stmt->execute($data);
-    echo("insert ok!");
+    if (!$stmt) {
+        $error = $error . "<br>Can't add product, please try again";
+    } else {
+        $msg = "Added successfully!";
+    }
+    
  
 ?>
 </body>
