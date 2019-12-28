@@ -3,20 +3,7 @@
 <head>
     <title>Create Product</title>
 </head>
-
-
-<body>
-<h1>Create Product </h1>
-    <form action="insertProduct.php" method="post">
-        <div class="error"><?php echo $error; ?></div>
-        <div class="msg"><?php echo $msg; ?></div>
-        Name: <input type="text" name="name" >
-        <br>
-        Price: <input type="text" name="price">
-        <br>
-        <input type="submit" value="Insert">
-    </form>
-    <?php
+<?php
 
     $db = parse_url(getenv("DATABASE_URL"));
     $pdo = new PDO("pgsql:" . sprintf(
@@ -44,5 +31,18 @@
     
  
 ?>
+
+<body>
+<h1>Create Product </h1>
+    <form action="insertProduct.php" method="post">
+        <div class="error"><?php echo $error; ?></div>
+        <div class="msg"><?php echo $msg; ?></div>
+        Name: <input type="text" name="name" >
+        <br>
+        Price: <input type="text" name="price">
+        <br>
+        <input type="submit" value="Insert">
+    </form>
+    
 </body>
 </html>
