@@ -27,16 +27,20 @@
         $stmt->execute();
         $resultSet = $stmt->fetchAll();
     ?>
-    <ul>
+    <br>
+    <table class="tbl">
+    <tr>
+        <th>Product ID</th>
+        <th>Product Name</th>
+        <th>Price</th>
+    </tr>
         <?php
             foreach ($resultSet as $row) {
-                echo "<li>" .
-                 '<a href="delete.php?id=' . $row["pid"] .  '">' .   $row["name"] 
-                        . '--'. $row["price"] 
-                . '</a>'
-                . "</li>";
+                echo "<tr>" .
+                 '<a href="delete.php?id='.<th>$row["pid"]</th>.<th>$row["name"]</th>.<th>$row["price"]<th>.
+                 '</a>'. "</tr>";
             }
         ?>
-    </ul>
+</table>    
 </body>
 </html>
