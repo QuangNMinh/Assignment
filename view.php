@@ -39,9 +39,9 @@
             foreach ($resultSet as $row) {
                 echo 
                 "<tr> 
-                <th>$row["id"] </th>
-                <th>$row["name"] </th>
-                <th>$row["price"] </th>
+                <th>$row[id] </th>
+                <th>$row[name] </th>
+                <th>$row[price] </th>
                 </tr>"
                 ;
             }
