@@ -39,17 +39,17 @@
             foreach ($resultSet as $row) {
                 echo 
                 "<tr> 
-                <th>$row[id] </th>
-                <th>$row[name] </th>
-                <th>$row[price] </th>
-                </tr>"
-                ;
+                <td>$row[id] </td>
+                <td>$row[name] </td>
+                <td>$row[price] </td>";
             }
         ?>
+        <td>
          <form class="frminline" action="delete.php" method="post">
-                <input type="hidden" name="pId" value="<?php echo $row[id] ?>" />
+                <input type="hidden" name="id" value="<?php echo $row[id] ?>" />
                 <input type="submit" value="Delete" />
             </form>
-    
+        </td>
+        <?php echo "</tr>"; ?>
 </body>
 </html>
