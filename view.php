@@ -23,7 +23,9 @@
         //compile the sql
         $stmt = $pdo->prepare($sql);
         //execute the query on the server and return the result set
-        
+        $stmt->setFetchMode(PDO::FETCH_ASSOC);
+        $stmt->execute();
+        $resultSet = $stmt->fetchAll();
     ?>
     <br>
     <table class="tbl">
@@ -33,16 +35,14 @@
         <th>Price</th>
     </tr>
         <?php
-        $stmt->setFetchMode(PDO::FETCH_ASSOC);
-        $stmt->execute();
-        $resultSet = $stmt->fetchAll();
             foreach ($resultSet as $row) {
-                echo "<tr>" .
-                 '<th> . $row["pid"] .  '</th>'. <th> .   $row["name"] . </th>
-                        . '<th>'. $row["price"] .'</th>'
-                . "</tr>";
+                echo "<li>" .
+                 '<a href="delete.php?id=' . $row["pid"] .  '">' .   $row["name"] 
+                        . '--'. $row["price"] 
+                . '</a>'
+                . "</li>";
             }
         ?>
-</table>
+    
 </body>
 </html>
