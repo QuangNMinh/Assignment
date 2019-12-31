@@ -36,9 +36,11 @@
     </tr>
         <?php
             foreach ($resultSet as $row) {
-                echo "<tr>" .
-                 '<a href="delete.php?id='.<th>$row["pid"]</th>.<th>$row["name"]</th>.<th>$row["price"]<th>.
-                 '</a>'. "</tr>";
+                echo "<tr>"
+                 '<th>$row["pid"]</th>
+                 <th>$row["name"]</th>
+                 <th>$row["price"]<th>
+                 ' "</tr>";
             }
         ?>
 </table>    
