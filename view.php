@@ -38,11 +38,12 @@
         $resultSet = $stmt->fetchAll();
             foreach ($resultSet as $row) {
                 echo 
-                "<li>" .
-                 '<a href="delete.php?id=' . $row["id"] .  '">' .   $row["name"] 
-                        . '--'. $row["price"] 
-                . '</a>'
-                . "</li>";
+                "<tr> 
+                <th>$row["id"] </th>
+                <th>$row["name"] </th>
+                <th>$row["price"] </th>
+                </tr>"
+                ;
             }
         ?>
     
