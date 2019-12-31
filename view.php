@@ -47,7 +47,7 @@
             }
         ?>
          <form class="frminline" action="delete.php" method="post">
-                <input type="hidden" name="pId" value="<?php echo $row[0] ?>" />
+                <input type="hidden" name="pId" value="<?php echo $row[id] ?>" />
                 <input type="submit" value="Delete" />
             </form>
     
