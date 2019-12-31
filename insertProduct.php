@@ -30,7 +30,7 @@
     <form action="insertProduct.php" method="post">
         <div class="error"><?php echo $error; ?></div>
         <div class="msg"><?php echo $msg; ?></div>
-        Name: <input type="text" name="name" >
+        Product Name: <input type="text" name="name" >
         <br>
         Price: <input type="text" name="price">
         <br>
