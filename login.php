@@ -15,8 +15,7 @@ if (isset($_POST['user'])) {
     if ($user == "" || $pass == "") {
         $error = "Not all fields was entered";
     } else {
-        $token = passwordToToken($pass);
-        $result = queryMysql("SELECT * FROM users WHERE username = '$user' AND password = '$token' AND status='1'");
+        $result = queryMysql("SELECT * FROM users WHERE username = '$user' AND password = '$pass' AND status='1'");
         if ($result->num_rows == 0) {
             $error = "Username/Password invalid";
         } else {
