@@ -10,8 +10,8 @@ $db = parse_url(getenv("DATABASE_URL"));
      ));    
 $error = $user = $pass = "";
 if (isset($_POST['user'])) {
-    $user = sanitizeString($_POST['user']);
-    $pass = sanitizeString($_POST['pass']);
+    $user = $_POST['user'];
+    $pass = $_POST['pass'];
     if ($user == "" || $pass == "") {
         $error = "Not all fields was entered";
     } else {
@@ -21,7 +21,7 @@ if (isset($_POST['user'])) {
             $error = "Username/Password invalid";
         } else {
             session_start();
-            $_SESSION['uId'] = mysqli_fetch_array($result)[0];
+            $_SESSION['uid'] = mysqli_fetch_array($result)[0];
             $_SESSION['user'] = $user;
             $_SESSION['pass'] = $pass;
             header("Location: index.php"); //redirect to index.php
