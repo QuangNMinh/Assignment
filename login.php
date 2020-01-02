@@ -3,14 +3,14 @@
 <?php 
  include("db.php");
 $error = $user = $pass = "";
-    $user = $_POST['user'];
-    $pass = $_POST['pass'];
+    $user = $_POST["user"];
+    $pass = $_POST["pass"];
     if ($user == "" || $pass == "") {
         $error = "Not all fields was entered";
     } else {
     	$data = [
-        'username' => $user,
-        'password' => $pass
+        'Username' => $user,
+        'Password' => $pass
     ];
 	}
     
