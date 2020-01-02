@@ -9,13 +9,10 @@ $error = $user = $pass = "";
         $error = "Not all fields was entered";
     } else {
     	$data = [
-        'Username' => $user,
-        'Password' => $pass
+        'user' => $user,
+        'pass' => $pass
     ];
 	}
-    
-
-
 ?>
 
 <br>
@@ -23,9 +20,9 @@ $error = $user = $pass = "";
     <fieldset class="fitContent">
         <legend>Please login</legend>
         Username: <br>
-        <input type="text" name="user" value="<?php echo $user; ?>"/><br>
+        <input type="text" name="user" value=""/><br>
         Password : <br>
-        <input type="password" name="pass" value="<?php echo $pass; ?>"/><br>
+        <input type="password" name="pass" value=""/><br>
         <input type="submit" value="Login"/>
         <?php
         $stmt =  
