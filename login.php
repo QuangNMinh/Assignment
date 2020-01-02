@@ -1,5 +1,5 @@
 <?php
-include("menu.php"); 
+
  include("db.php");
 session_start();
 
