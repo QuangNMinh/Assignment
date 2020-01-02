@@ -1,7 +1,6 @@
 <html>
 <body>
-<?php
-include("menu.php"); 
+<?php 
  include("db.php");
 session_start();
 
