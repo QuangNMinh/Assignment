@@ -4,8 +4,8 @@
     <title>Create Product</title>
 </head>
 <?php
-    require_once 'menu.php'; 
-    require_once 'db.php';    
+    include("menu.php"); 
+ include("db.php");
     $name = $_POST["name"];
     $price = $_POST["price"];
     $data = [

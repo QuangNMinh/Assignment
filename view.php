@@ -8,9 +8,8 @@
 </head>
 <body>
     <?php
-    require_once 'menu.php';
-        //Refer to database 
-    require_once 'db.php';
+    include("menu.php"); 
+ include("db.php");
         $sql = "select * from products";
         //compile the sql
         $stmt = $pdo->prepare($sql);

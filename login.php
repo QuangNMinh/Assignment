@@ -1,5 +1,6 @@
 <?php
-require_once 'db.php'; 
+include("menu.php"); 
+ include("db.php");
 session_start();
 
 $msg = ""; 
