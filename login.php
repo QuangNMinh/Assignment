@@ -12,19 +12,8 @@ $error = $user = $pass = "";
         'name' => $name,
         'password' => $pass
     ];
-       $stmt =  
-        $pdo->prepare("SELECT * FROM users WHERE username = '$user' AND password = '$pass' AND status='1'");
-        $stmt->execute($data);
-        if ($stmt->num_rows == 0) {
-            $error = "Username/Password invalid";
-        } else {
-            session_start();
-            $_SESSION['user'] = $user;
-            $_SESSION['pass'] = $pass;
-            header("Location: index.php"); //redirect to index.php
-            die("You already log in. Please <a href='index.php'>click here</> to continue.");
-        }
-    }
+	}
+    
 
 
 ?>
@@ -38,6 +27,20 @@ $error = $user = $pass = "";
         Password : <br>
         <input type="password" name="pass" value="<?php echo $pass; ?>"/><br>
         <input type="submit" value="Login"/>
+        <?php
+        $stmt =  
+        $pdo->prepare("SELECT * FROM users WHERE username = '$user' AND password = '$pass' AND status='1'");
+        $stmt->execute($data);
+        if ($stmt->num_rows == 0) {
+            $error = "Username/Password invalid";
+        } else {
+            session_start();
+            $_SESSION['user'] = $user;
+            $_SESSION['pass'] = $pass;
+            header("Location: index.php"); //redirect to index.php
+            die("You already log in. Please <a href='index.php'>click here</> to continue.");
+        }
+        ?>
     </fieldset>
 </form>
 </body>
