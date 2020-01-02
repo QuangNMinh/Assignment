@@ -9,7 +9,7 @@
          $db["pass"],
          ltrim($db["path"], "/")
      ));    
-     $id = $_GET["id"];
+     $id = $_POST["id"];
    
      $data = [
          'id' => $id
