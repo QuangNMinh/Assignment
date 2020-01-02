@@ -18,9 +18,9 @@ include("db.php");
         $loggedin = FALSE;
     }
     if ($loggedin) {
-        include_once './menu_admin.php';
+        include_once 'menu.php';
     } else {
-        include_once './menu_guest.php';
+        include_once 'menuguest.php';
     }
     ?>
 </body>
