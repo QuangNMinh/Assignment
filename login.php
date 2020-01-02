@@ -20,7 +20,6 @@ if (isset($_POST['user'])) {
             $error = "Username/Password invalid";
         } else {
             session_start();
-            $_SESSION['uid'] = mysqli_fetch_array($stmt)[0];
             $_SESSION['user'] = $user;
             $_SESSION['pass'] = $pass;
             header("Location: index.php"); //redirect to index.php
