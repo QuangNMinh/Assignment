@@ -5,7 +5,7 @@
 </head>
 <body>
 <?php
-include("menu.php"); 
+include("index.php"); 
  include("db.php");
     $name = $_POST["name"];
     $price = $_POST["price"];

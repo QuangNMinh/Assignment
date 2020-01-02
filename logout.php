@@ -1,5 +1,5 @@
 <?php
-include("menu.php"); 
+include("index.php"); 
  include("db.php");
 session_start();
 $_SESSION['sess_user_id'] = "";

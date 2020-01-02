@@ -8,7 +8,7 @@
 </head>
 <body>
     <?php
-    include("menu.php"); 
+    include("index.php"); 
  include("db.php");
         $sql = "select * from products";
         //compile the sql
