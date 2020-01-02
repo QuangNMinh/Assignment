@@ -27,7 +27,7 @@
          $stmt->setFetchMode(PDO::FETCH_ASSOC);
         $stmt->execute();
         $resultSet = $stmt->fetchAll();
-            foreach ($resultSet as $row) {
+            while ($resultSet as $row) {
                 echo 
                 "<tr> 
                 <td>$row[id] </td>
