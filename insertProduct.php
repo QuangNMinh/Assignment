@@ -3,8 +3,9 @@
 <head>
     <title>Create Product</title>
 </head>
+<body>
 <?php
-    include("menu.php"); 
+include("menu.php"); 
  include("db.php");
     $name = $_POST["name"];
     $price = $_POST["price"];
@@ -17,7 +18,7 @@
  
 ?>
 
-<body>
+
 <h1>Create Product </h1>
     <form action="insertProduct.php" method="post">
         <div class="error"><?php echo $error; ?></div>
