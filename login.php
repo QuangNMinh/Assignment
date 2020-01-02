@@ -1,3 +1,5 @@
+<html>
+<body>
 <?php
 include("menu.php"); 
  include("db.php");
@@ -34,8 +36,7 @@ if(isset($_POST['submitBtnLogin'])) {
 }
 
 ?>
-<html>
-<body>
+
 <br>
 <form method="post" action="login.php">
     <fieldset class="fitContent">
