@@ -22,6 +22,7 @@ if(isset($_POST['submitBtnLogin'])) {
         $_SESSION['sess_user_id']   = $row['uid'];
         $_SESSION['sess_user_name'] = $row['username'];
         $_SESSION['sess_name'] = $row['name'];
+        header("Location: index.php");
        
       } else {
         $msg = "Invalid username and password!";
