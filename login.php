@@ -9,7 +9,7 @@ $error = $user = $pass = "";
         $error = "Not all fields was entered";
     } else {
     	$data = [
-        'name' => $name,
+        'username' => $user,
         'password' => $pass
     ];
 	}
