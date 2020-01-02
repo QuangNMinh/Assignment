@@ -13,9 +13,6 @@ include("index.php");
         'name' => $name,
         'price' => $price
     ];
-    
-    
- 
 ?>
 
 
