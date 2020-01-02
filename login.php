@@ -1,5 +1,5 @@
 <?php
-
+include("menu.php"); 
  include("db.php");
 session_start();
 
@@ -9,7 +9,7 @@ if(isset($_POST['submitBtnLogin'])) {
   $password = trim($_POST['password']);
   if($username != "" && $password != "") {
     try {
-      $query = "select * from users where username=:username and password=:password";
+      $query = "select * from `users` where `username`=:username and `password`=:password";
       $stmt = $db->prepare($query);
       $stmt->bindParam('username', $username, PDO::PARAM_STR);
       $stmt->bindValue('password', $password, PDO::PARAM_STR);
