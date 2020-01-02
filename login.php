@@ -25,7 +25,7 @@ $error = $user = $pass = "";
             die("You already log in. Please <a href='index.php'>click here</> to continue.");
         }
     }
-}
+
 
 ?>
 
