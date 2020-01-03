@@ -19,6 +19,7 @@ $error = $user = $pass = "";
 <form method="post" action="login.php">
     <fieldset class="fitContent">
         <legend>Please login</legend>
+        <span class="error"><?php echo $error ?></span><br>
         Username: <br>
         <input type="text" name="user" value=""/><br>
         Password : <br>
