@@ -25,15 +25,16 @@ $error = $user = $pass = "";
         <input type="password" name="pass" value=""/><br>
         <input type="submit" value="Login"/>
         <?php
+        $stmt = $pdo->prepare("select * from users where username=:user and password=:pass");   
         $stmt->bind_param($user, $pass);
-        $stmt = $pdo->prepare("select * from users where username=":user"  and password=":pass"");   
-    $stmt->execute($data);
-        if ($stmt->rowCount() == 0) {
+    	$stmt->execute($data);
+    	$count = $stmt->rowCount();
+    	$row   = $stmt->fetch(PDO::FETCH_ASSOC);
+        if ($count == 0 && empty($row)) {
             $error = "Username/Password invalid";
         } else {
             session_start();
-            $_SESSION['user'] = $user;
-            $_SESSION['pass'] = $pass;
+            $_SESSION['user'] = $row['username'];
             header("Location: index.php"); //redirect to index.php
             die("You already log in. Please <a href='index.php'>click here</> to continue.");
         }
