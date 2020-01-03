@@ -29,12 +29,12 @@ $error = $user = $pass = "";
         $stmt->bind_param($user, $pass);
     	$stmt->execute($data);
     	$count = $stmt->rowCount();
-    	$row   = $stmt->fetch(PDO::FETCH_ASSOC);
-        if ($count == 0 && empty($row)) {
+        if ($count == 0) {
             $error = "Username/Password invalid";
         } else {
             session_start();
-            $_SESSION['user'] = $row['username'];
+            $_SESSION['user'] = $user;
+            $_SESSION['pass'] = $pass;
             header("Location: index.php"); //redirect to index.php
             die("You already log in. Please <a href='index.php'>click here</> to continue.");
         }
