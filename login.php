@@ -26,7 +26,6 @@ $error = $user = $pass = "";
         <input type="submit" value="Login"/>
         <?php
         $stmt = $pdo->prepare("select * from users where username=:user and password=:pass");   
-        $stmt->bind_param($user, $pass);
     	$stmt->execute($data);
     	$count = $stmt->rowCount();
         if ($count == 0) {
