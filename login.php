@@ -28,9 +28,8 @@ $error = $user = $pass = "";
         $stmt = $pdo->prepare("select * from users where username=:user and password=:pass");   
         //$stmt->bind_param($user, $pass);
     	$stmt->execute($data);
-    	$stmt->setFetchMode(PDO::FETCH_ASSOC);
-    	$resultSet = $stmt->fetchAll();
-        if ($resultSet == 0) {
+    	$count = $stmt->rowCount();
+        if ($count == 0) {
             $error = "Username/Password invalid";
         } else {
             session_start();
