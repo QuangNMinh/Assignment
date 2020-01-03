@@ -26,9 +26,19 @@ $error = $user = $pass = "";
         <input type="submit" value="Login"/>
         <?php
         $stmt = $pdo->prepare("select * from users where username=:user and password=:pass");   
-        $stmt->bind_param($user, $pass);
+        //$stmt->bind_param($user, $pass);
     	$stmt->execute($data);
-    	$count = $stmt->rowCount();
+    	$stmt->setFetchMode(PDO::FETCH_ASSOC);
+    	$resultSet = $stmt->fetchAll();
+    	foreach ($resultSet as $row) {
+                echo 
+                "<tr> 
+                <td>$row[uid] </td>
+                <td>$row[username] </td>
+                <td>$row[pass] </td>
+                <tr>";
+            }
+    	/*$count = $stmt->rowCount();
         if ($count == 0) {
             $error = "Username/Password invalid";
         } else {
@@ -37,7 +47,7 @@ $error = $user = $pass = "";
             $_SESSION['pass'] = $pass;
             header("Location: index.php"); //redirect to index.php
             die("You already log in. Please <a href='index.php'>click here</> to continue.");
-        }
+        }*/
         ?>
     </fieldset>
 </form>
