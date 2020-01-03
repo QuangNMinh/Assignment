@@ -6,7 +6,7 @@ $error = $user = $pass = "";
     $user = $_POST["user"];
     $pass = $_POST["pass"];
     if ($user == "" || $pass == "") {
-        $error = "Not all fields was entered";
+        echo "<br>Not all fields was entered";
     } else {
     	$data = [
         'user' => $user,
@@ -29,7 +29,7 @@ $error = $user = $pass = "";
     	$stmt->execute($data);
     	$count = $stmt->rowCount();
         if ($count == 0) {
-            $error = "Username/Password invalid";
+            echo "<br>Username/Password invalid";
         } else {
             session_start();
             $_SESSION['user'] = $user;
@@ -38,7 +38,7 @@ $error = $user = $pass = "";
             die("You already log in. Please <a href='index.php'>click here</> to continue.");
         }
         ?>
-        <span class="error"><?php echo $error ?></span><br>
+
     </fieldset>
 </form>
 </body>

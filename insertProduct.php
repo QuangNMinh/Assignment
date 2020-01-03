@@ -29,7 +29,7 @@ include("index.php");
     if (!$stmt) {
         echo "<br>Can't add product, please try again";
     } else {
-        echo "<br>Added successfully!;
+        echo "<br>Added successfully!";
     } ?>
     
     </form>
