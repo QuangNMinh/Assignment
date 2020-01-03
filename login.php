@@ -30,16 +30,7 @@ $error = $user = $pass = "";
     	$stmt->execute($data);
     	$stmt->setFetchMode(PDO::FETCH_ASSOC);
     	$resultSet = $stmt->fetchAll();
-    	foreach ($resultSet as $row) {
-                echo 
-                "<tr> 
-                <td>$row[uid] </td>
-                <td>$row[username] </td>
-                <td>$row[password] </td>
-                <tr>";
-            }
-    	/*$count = $stmt->rowCount();
-        if ($count == 0) {
+        if ($resultSet == 0) {
             $error = "Username/Password invalid";
         } else {
             session_start();
@@ -47,7 +38,7 @@ $error = $user = $pass = "";
             $_SESSION['pass'] = $pass;
             header("Location: index.php"); //redirect to index.php
             die("You already log in. Please <a href='index.php'>click here</> to continue.");
-        }*/
+        }
         ?>
     </fieldset>
 </form>
