@@ -35,7 +35,7 @@ $error = $user = $pass = "";
                 "<tr> 
                 <td>$row[uid] </td>
                 <td>$row[username] </td>
-                <td>$row[pass] </td>
+                <td>$row[password] </td>
                 <tr>";
             }
     	/*$count = $stmt->rowCount();
