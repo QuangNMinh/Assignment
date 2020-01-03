@@ -25,7 +25,7 @@ $error = $user = $pass = "";
         <input type="password" name="pass" value=""/><br>
         <input type="submit" value="Login"/>
         <?php
-        $pdo->prepare("select * from users where username=:user  and password=:pass");   
+        $stmt = $pdo->prepare("select * from users where username=:user  and password=:pass");   
     $stmt->execute($data);
         if ($stmt->num_rows == 0) {
             $error = "Username/Password invalid";
