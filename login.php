@@ -1,20 +1,5 @@
 <html>
 <body>
-<?php 
- include("db.php");
-$error = $user = $pass = "";
-    $user = $_POST["user"];
-    $pass = $_POST["pass"];
-    if ($user == "" || $pass == "") {
-        $error = "Not all fields was entered";
-    } else {
-    	$data = [
-        'user' => $user,
-        'pass' => $pass
-    ];
-	}
-?>
-
 <br>
 <form method="post" action="login.php">
     <fieldset class="fitContent">
@@ -26,6 +11,19 @@ $error = $user = $pass = "";
         <input type="password" name="pass" value=""/><br>
         <input type="submit" value="Login"/>
         <?php
+        include("db.php");
+		$error = $user = $pass = "";
+			$user = $_POST["user"];
+    		$pass = $_POST["pass"];
+    		if ($user == "" || $pass == "") {
+        		$error = "Not all fields was entered";
+        		} 
+        		else 
+        		{
+    			$data = [
+        			'user' => $user,
+        			'pass' => $pass];
+				};
         $stmt = $pdo->prepare("select * from users where username=:user and password=:pass");   
     	$stmt->execute($data);
     	$count = $stmt->rowCount();
