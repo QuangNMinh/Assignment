@@ -18,8 +18,6 @@ include("index.php");
 
 <h1>Create Product </h1>
     <form action="insertProduct.php" method="post">
-        <div class="error"><?php echo $error; ?></div>
-        <div class="msg"><?php echo $msg; ?></div>
         Product Name: <input type="text" name="name" >
         <br>
         Price: <input type="text" name="price">
@@ -33,6 +31,8 @@ include("index.php");
     } else {
         $msg = "Added successfully!";
     } ?>
+    <div class="error"><?php echo $error; ?></div>
+    <div class="msg"><?php echo $msg; ?></div>
     </form>
     
 </body>
