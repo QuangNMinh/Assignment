@@ -1,4 +1,5 @@
 <?php
+//delete function
  include("menu.php"); 
  include("db.php");
      $id = $_POST["id"];

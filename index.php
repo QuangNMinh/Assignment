@@ -5,6 +5,7 @@
 </head>
 <body>
 <?php 
+//Check log in
 session_start();
 include("db.php");
 

@@ -6,6 +6,7 @@
 </head>
 <body>
 <?php
+//get the product name and price
 include("index.php"); 
  include("db.php");
     $name = $_POST["name"];
@@ -26,7 +27,9 @@ include("index.php");
         <input type="text" name="price" id="price">
         <br>
         <input type="submit" value="Insert">
-        <?php $stmt =  
+        <?php
+        //run sql query and error message
+        $stmt =  
         $pdo->prepare("INSERT INTO products(name, price) VALUES (:name,:price)");   
     $stmt->execute($data);
     if (!$stmt) {

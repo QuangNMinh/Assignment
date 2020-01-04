@@ -26,6 +26,7 @@
         <th>Options</th>
     </tr>
         <?php
+        //display data table
          $stmt->setFetchMode(PDO::FETCH_ASSOC);
         $stmt->execute();
         $resultSet = $stmt->fetchAll();
