@@ -23,7 +23,7 @@ nav ul ul {
     
 }
 nav ul li {
-    margin-left: 100px;
+    margin-left: 10px;
     float: left;
     padding : 10px;
     
@@ -31,7 +31,7 @@ nav ul li {
 }
 nav ul li:hover{
     background-color: #b0e0e6;
-    height: 32.5px;
+    height: 30px;
     
 }
 nav ul li ul li{

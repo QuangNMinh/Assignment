@@ -17,8 +17,9 @@ include("index.php");
 ?>
 
 
-<h1>Create Product </h1>
+
     <form action="insertProduct.php" method="post">
+        <h3>Create Product </h3><br>
         Product Name: <input type="text" name="name" >
         <br>
         Price: <input type="text" name="price">

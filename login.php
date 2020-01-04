@@ -7,7 +7,16 @@
 <form method="post" action="login.php">
     <fieldset class="fitContent">
         <?php 
-    include("db.php");
+    
+        ?>
+        <legend>Please log in</legend>
+        Username: <br>
+        <input type="text" name="user" value=""/><br>
+        Password : <br>
+        <input type="password" name="pass" value=""/><br>
+        <input type="submit" value="Login"/>
+        <?php
+        include("db.php");
         $user = $_POST["user"];
         $pass = $_POST["pass"];
         if ($user == "" || $pass == "") {
@@ -17,15 +26,6 @@
         'user' => $user,
         'pass' => $pass
                 ];
-               }
-        ?>
-        <legend>Please log in</legend>
-        Username: <br>
-        <input type="text" name="user" value=""/><br>
-        Password : <br>
-        <input type="password" name="pass" value=""/><br>
-        <input type="submit" value="Login"/>
-        <?php
         $stmt = $pdo->prepare("select * from users where username=:user and password=:pass");   
     	$stmt->execute($data);
     	$count = $stmt->rowCount();
@@ -38,6 +38,7 @@
             header("Location: index.php"); //redirect to index.php
             die("You already log in. Please <a href='index.php'>click here</> to continue.");
         }
+    }
         ?>
 
     </fieldset>

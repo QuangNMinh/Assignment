@@ -18,7 +18,7 @@
        
     ?>
     <br>
-    <table class="tbl">
+    <table class="tbl" value="Product list">
     <tr>
         <th>Product ID</th>
         <th>Product Name</th>
