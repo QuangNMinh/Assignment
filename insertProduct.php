@@ -19,9 +19,11 @@ include("index.php");
     <form action="insertProduct.php" method="post">
     <fieldset class="fitContent">
         <h3>Create a product </h3><br>
-        Product Name: <input type="text" name="name" id="pName" >
+        Product Name:<br>
+        <input type="text" name="name" id="pName" >
         <br>
-        Price: <input type="text" name="price" id="price">
+        Price:<br>
+        <input type="text" name="price" id="price">
         <br>
         <input type="submit" value="Insert">
         <?php $stmt =  
