@@ -6,10 +6,6 @@
 .submit{
     text-align: center;
 }
-.error{
-    color: red;
-}
-
 /*style for the table */
 .tbl{
     background-color: darkgray;
@@ -36,20 +32,12 @@ form{
     padding: 1px;
     width: fit-content;
 }
-textArea{
-    width:200px;
-    height:100px;
-    resize: none;
-}
 .tbl{
     
     margin-left: 37.5%;
 }
 legend{
     text-align: center;
-}
-.search{
-    text-align: left;
 }
 fieldset{
     width: fit-content;
