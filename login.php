@@ -4,7 +4,7 @@
 
 
 <br>
-<form method="post" action="login.php">
+<form method="post" action="login.php" >
     <fieldset class="fitContent">
         <?php 
     

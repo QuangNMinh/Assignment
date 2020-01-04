@@ -31,7 +31,7 @@
 }
 form{
     margin-top: 0;
-    margin-left: 0;
+    margin-left: 45%;
     text-align: center;
     padding: 1px;
     width: fit-content;
@@ -55,5 +55,5 @@ fieldset{
     width: fit-content;
 }
 #pName{
-    
+
 }
