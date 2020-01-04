@@ -1,4 +1,6 @@
-
+body{
+    margin: 0;
+}
 nav ul {
     list-style: none;
    float: left;
@@ -7,8 +9,9 @@ nav ul {
 
     text-align: right;
     
-    margin: 0 0 0 75px;
+    margin: 0 0 0 0px;
     height: 50px;
+    padding: 0;
 }
 nav ul ul {
     position : absolute;
