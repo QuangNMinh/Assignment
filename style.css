@@ -54,6 +54,6 @@ legend{
 fieldset{
     width: fit-content;
 }
-#pName{
-
+#text{
+    text-align: left;
 }
