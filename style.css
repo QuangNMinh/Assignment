@@ -30,10 +30,11 @@
     margin: 0;
 }
 form{
-    margin-top: 15% ;
-    margin-left: 40%;
+    margin-top: 0;
+    margin-left: 0;
     text-align: center;
     padding: 1px;
+    width: fit-content;
 }
 textArea{
     width:200px;
@@ -52,4 +53,7 @@ legend{
 }
 fieldset{
     width: fit-content;
+}
+#pName{
+    
 }

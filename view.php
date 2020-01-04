@@ -23,6 +23,7 @@
         <th>Product ID</th>
         <th>Product Name</th>
         <th>Price</th>
+        <th>Options</th>
     </tr>
         <?php
          $stmt->setFetchMode(PDO::FETCH_ASSOC);

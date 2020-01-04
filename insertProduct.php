@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Create Product</title>
+    <title>Create product</title>
     <link rel="stylesheet" type="text/css" href="style.css">
 </head>
 <body>
@@ -15,14 +15,11 @@ include("index.php");
         'price' => $price
     ];
 ?>
-
-
-
     <form action="insertProduct.php" method="post">
-        <h3>Create Product </h3><br>
-        Product Name: <input type="text" name="name" >
+        <h3>Create a product </h3><br>
+        Product Name: <input type="text" name="name" id="pName" >
         <br>
-        Price: <input type="text" name="price">
+        Price: <input type="text" name="price" id="price">
         <br>
         <input type="submit" value="Insert">
         <?php $stmt =  
