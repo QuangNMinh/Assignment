@@ -1,0 +1,55 @@
+.fitContent{
+    width: fit-content;
+    padding: 10px;
+    text-align: left;
+}
+.submit{
+    text-align: center;
+}
+.error{
+    color: red;
+}
+
+/*style for the table */
+.tbl{
+    background-color: darkgray;
+    margin-left: 40px;
+    text-align: center;
+}
+.tbl tr:nth-child(odd){
+    background-color: #f6f6f6;
+}
+.tbl tr:nth-child(even){
+    background-color: bisque;
+}
+.tbl tr td, th{
+    padding: 5px;
+}
+.frminline{
+    display: block;
+    margin: 0;
+}
+form{
+    margin-top: 15% ;
+    margin-left: 40%;
+    text-align: center;
+    padding: 1px;
+}
+textArea{
+    width:200px;
+    height:100px;
+    resize: none;
+}
+.tbl{
+    
+    margin-left: 37.5%;
+}
+legend{
+    text-align: center;
+}
+.search{
+    text-align: left;
+}
+fieldset{
+    width: fit-content;
+}

@@ -1,8 +1,8 @@
 <html>
+<link rel="stylesheet" type="text/css" href="style.css">
 <body>
 <?php 
  include("db.php");
-$error = $user = $pass = "";
     $user = $_POST["user"];
     $pass = $_POST["pass"];
     if ($user == "" || $pass == "") {

@@ -1,3 +1,4 @@
+<link rel="stylesheet" type="text/css" href="menu_style.css">
 <div>
 <nav>
     <ul>

@@ -1,4 +1,5 @@
 <?php $user = "" ?>
+<link rel="stylesheet" type="text/css" href="menu_sytle.css">
 <nav> 
     <ul>
         <li>

@@ -2,6 +2,7 @@
 <html>
 <head>
     <title>Create Product</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
 </head>
 <body>
 <?php
