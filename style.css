@@ -10,7 +10,8 @@
 /*style for the table */
 .tbl{
     background-color: darkgray;
-    margin-left: 40px;
+    margin-left: 37.5%;
+    margin-top: 100px;
     text-align: center;
 }
 .tbl tr:nth-child(odd){
@@ -32,10 +33,6 @@ form{
     text-align: center;
     padding: 1px;
     width: fit-content;
-}
-.tbl{
-    
-    margin-left: 37.5%;
 }
 legend{
     text-align: center;
