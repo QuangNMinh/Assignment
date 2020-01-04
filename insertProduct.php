@@ -15,7 +15,9 @@ include("index.php");
         'price' => $price
     ];
 ?>
+
     <form action="insertProduct.php" method="post">
+    <fieldset class="fitContent">
         <h3>Create a product </h3><br>
         Product Name: <input type="text" name="name" id="pName" >
         <br>
@@ -30,7 +32,7 @@ include("index.php");
     } else {
         echo "<br>Added successfully!";
     } ?>
-    
+    </fieldset>
     </form>
     
 </body>
