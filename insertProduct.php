@@ -19,7 +19,7 @@ include("index.php");
 
     <form action="insertProduct.php" method="post">
     <fieldset class="fitContent">
-        <h3>Create a product </h3><br>
+        <h3>Add a product </h3><br>
         Product Name:<br>
         <input type="text" name="name" id="pName" >
         <br>
