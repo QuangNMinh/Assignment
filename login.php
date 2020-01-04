@@ -1,23 +1,24 @@
 <html>
 <link rel="stylesheet" type="text/css" href="style.css">
 <body>
-<?php 
- include("db.php");
-    $user = $_POST["user"];
-    $pass = $_POST["pass"];
-    if ($user == "" || $pass == "") {
-        echo "<br>Not all fields was entered";
-    } else {
-    	$data = [
-        'user' => $user,
-        'pass' => $pass
-    ];
-	}
-?>
+
 
 <br>
 <form method="post" action="login.php">
     <fieldset class="fitContent">
+        <?php 
+    include("db.php");
+        $user = $_POST["user"];
+        $pass = $_POST["pass"];
+        if ($user == "" || $pass == "") {
+        echo "<br>Not all fields was entered";
+        } else {
+        $data = [
+        'user' => $user,
+        'pass' => $pass
+                ];
+               }
+        ?>
         <legend>Please log in</legend>
         Username: <br>
         <input type="text" name="user" value=""/><br>
